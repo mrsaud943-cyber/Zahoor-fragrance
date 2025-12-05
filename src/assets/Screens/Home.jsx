@@ -10,8 +10,7 @@ import {
 import { IoLogoWhatsapp } from "react-icons/io";
 import { IoLogoTiktok } from "react-icons/io5";
 import { MdContactPhone } from "react-icons/md";
-import homevid from "../Images/Home.mp4";
-import homeimg from "../Images/Home.png";
+import HomeVideo from "../Images/home.mp4";
 import Navbar from "../Components/Navbar";
 import night from "../Images/Night.jpg";
 import woods from "../Images/Woods.png";
