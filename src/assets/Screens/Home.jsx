@@ -10,12 +10,10 @@ import {
 import { IoLogoWhatsapp } from "react-icons/io";
 import { IoLogoTiktok } from "react-icons/io5";
 import { MdContactPhone } from "react-icons/md";
-import HomeVideo from "../Images/home.mp4";
 import Navbar from "../Components/Navbar";
 import night from "../Images/Night.jpg";
 import woods from "../Images/Woods.png";
 import room from "../Images/Room.png";
-
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GiDelicatePerfume } from "react-icons/gi";
@@ -78,7 +76,7 @@ const Home = () => {
             <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-24">
                 <div className="absolute flex items-center justify-center">
                     <video
-                        src={HomeVideo}
+                       src="../../../public/video/home.mp4" 
                         autoPlay
                         loop
                         muted
