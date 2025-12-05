@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zahoor-fragrance.vercel.app/sitemap.xml
