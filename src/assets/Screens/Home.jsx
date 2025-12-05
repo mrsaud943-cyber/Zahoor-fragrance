@@ -78,7 +78,7 @@ const Home = () => {
             <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-24">
                 <div className="absolute flex items-center justify-center">
                     <video
-                        src={homevid}
+                        src={HomeVideo}
                         autoPlay
                         loop
                         muted
