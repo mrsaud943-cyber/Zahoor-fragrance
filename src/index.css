@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Zyntro';
+    src: url("./assets/Fonts/zyntro-demo/ZyntroDemo-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Berita';
+  src: url('/assets/Fonts/berita/Berita.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
