@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { IoChevronBack } from "react-icons/io5";
 import { FaShoppingBag } from "react-icons/fa";
-import perfumeImg from "../../Images/Room.png";
+import perfumeImg from "../../Images/Topical.jpeg";
 import { Link } from "react-router-dom";
 
 
-const Board = () => {
+const Topical = () => {
     const containerRef = useRef(null);
     const [formData, setFormData] = useState({
         name: "",
@@ -50,13 +50,13 @@ const Board = () => {
 
         const phoneNumber = "923302861703";
 
-        const whatsappMessage = `🛍 Mr.Zaryab Qaiser Awan! I Would Like To Place An Order For "Board Room". 🛍
+        const whatsappMessage = `🛍 Mr.Zaryab Qaiser Awan! I Would Like To Place An Order For "Topical Mist". 🛍
 
  Name: ${name}
  Phone: ${phone}
  Address: ${address}
  Quantity: ${quantity}
- Price: Rs 2,600 PKR (50ml) per bottle
+ Price: Rs 3500 (50ml) per bottle
  Message: ${message || "N/A"}
 
 Please confirm my order.`;
@@ -102,7 +102,7 @@ Please confirm my order.`;
                     </h1>
 
                     <h2 className="text-center text-yellow-300 mb-8 text-xl font-semibold">
-                        Board Room — 50ml <span className="text-yellow-400">Rs 2,600 PKR</span>
+                        Topical Mist — 50ml <span className="text-yellow-400">Rs 3500 PKR</span>
                     </h2>
 
                     <div className="flex flex-col gap-4">
@@ -165,7 +165,7 @@ Please confirm my order.`;
                                 <FaShoppingBag className="absolute text-3xl opacity-0 scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100" />
                             </button>
 
-                            <Link to="/VelvetNight">
+                            <Link to="/TopicalMist">
                                 <button
                                     className="relative inline-flex items-center justify-center gap-3 w-full lg:px-15 md:px-15 sm:px-15 py-3 bg-yellow-300 text-black font-bold text-lg rounded-r-full shadow-md hover:scale-105 active:scale-95 transition-all duration-300 group overflow-hidden"
                                 >
@@ -182,4 +182,4 @@ Please confirm my order.`;
     );
 };
 
-export default Board;
+export default Topical;

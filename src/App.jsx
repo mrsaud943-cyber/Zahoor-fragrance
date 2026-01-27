@@ -17,6 +17,8 @@ import Floral from './assets/Screens/BuyNowForms/Floral'
 import Buyseductress from './assets/Screens/BuyNowForms/Buyseductress'
 import Taster from './assets/Screens/Forms/Taster'
 import Tasterbuynow from './assets/Screens/BuyNowForms/Tasterbuynow'
+import TopicalMist from './assets/Screens/Forms/TopicalMist'
+import Topical from './assets/Screens/BuyNowForms/Topical'
 
 const App = () => {
     return (
@@ -36,6 +38,7 @@ const App = () => {
                     <Route path='/BoardRoom' element={<BoardRoom /> } />
                     <Route path='/FloralOasis' element={<FloralOasis /> } />
                     <Route path='/Seductress' element={<Seductress /> } />
+                    <Route path='/TopicalMist' element={<TopicalMist /> } />
                     <Route path='/taster' element={<Taster /> } />
                     <Route path='/woodsBuyNow' element={<Wood /> } />
                     <Route path='/boardBuyNow' element={<Board /> } />
@@ -43,6 +46,7 @@ const App = () => {
                     <Route path='/floralBuyNow' element={<Floral /> } />
                     <Route path='/seductressBuyNow' element={<Buyseductress/> } />
                     <Route path='/tasterbuynow' element={<Tasterbuynow/> } />
+                    <Route path='/topical' element={<Topical/> } />
 
                 </Routes>
 

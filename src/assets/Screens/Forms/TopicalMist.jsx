@@ -2,13 +2,13 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { IoChevronBack } from "react-icons/io5";
-import img from "../../Images/Room.png";
+import img from "../../Images/Topical.jpeg";
 import { BsCartCheckFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BoardRoom = () => {
+const TopicalMist = () => {
     const heroRef = useRef(null);
     const panelRef = useRef(null);
     const notesRef = useRef(null);
@@ -83,23 +83,20 @@ const BoardRoom = () => {
 
                     <div className="flex flex-col items-center md:items-start md:w-1/2">
                         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-[Zyntro] text-yellow-400 font-bold leading-tight tracking-wide drop-shadow-[0_0_20px_rgba(255,215,0,0.25)]">
-                            Board Room
+                           Topical Mist
                         </h1>
 
-                        <p className="mt-6 text-gray-300 max-w-lg text-base sm:text-lg lg:text-xl leading-relaxed">
-                            Gives impression of Office For Men
-                        </p>
-
+                        
                         <div className="mt-4 text-center md:text-left">
                             <p className="text-yellow-300 text-xl sm:text-2xl font-semibold tracking-wide">
-                                50ml – 2600 PKR
+                                50ml – 3500 PKR
                             </p>
                             <p className="text-yellow-200/70 text-sm mt-1 italic">Per Bottle</p>
                         </div>
 
                         <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
 
-                            <Link to='/boardBuyNow'>
+                            <Link to='/topical'>
                                 <button className="relative mx-auto md:mx-0 hover:scale-105 active:scale-100 px-10 py-2 overflow-hidden bg-yellow-300 text-black rounded-r-full flex items-center justify-center text-lg font-bold shadow-sm shadow-yellow-200 transition-all duration-300 hover:text-yellow-400 group">
                                     <span className="transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-2">Buy Now</span>
                                     <BsCartCheckFill className="absolute text-3xl text-black opacity-0 scale-75 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100" />
@@ -141,7 +138,7 @@ const BoardRoom = () => {
                             Notes
                         </h3>
                         <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
-                            Clean, professional, masculine, and long lasting and perfect for office were.
+                            N/A
                         </p>
                     </div>
 
@@ -150,9 +147,9 @@ const BoardRoom = () => {
                         ref={notesRef}
                     >
                         {[
-                            { title: "Top", text: "Bergamot, Ambroxan, Orris Root" },
-                            { title: "Middle", text: "Vetiver, Woody notes, Light floral touches" },
-                            { title: "Base", text: "Musk, Patchouli, Ambergris" },
+                            { title: "Top"},
+                            { title: "Middle"},
+                            { title: "Base"},
 
                         ].map((n) => (
                             <div
@@ -162,7 +159,7 @@ const BoardRoom = () => {
                                 <h4 className="text-lg sm:text-xl font-semibold text-yellow-400 mb-3">
                                     {n.title}
                                 </h4>
-                                <p className="text-gray-300 text-sm sm:text-base">{n.text}</p>
+                                <p className="text-gray-300 text-sm sm:text-base">N/A</p>
                             </div>
                         ))}
                     </div>
@@ -179,7 +176,7 @@ const BoardRoom = () => {
                             Inspiration
                         </h3>
                         <p className="text-gray-300 leading-relaxed text-base sm:text-lg mb-6">
-                            “Board Room” being inspired by Office for Men gives it a clear direction: sleek, professional, and luxurious — think modern corporate power, refined wood, fresh musk, and executive minimalism.
+                            N/A
                         </p>
                     </div>
 
@@ -199,10 +196,10 @@ const BoardRoom = () => {
             <footer className="bg-black/80 border-t border-yellow-400/5 py-16">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 text-center">
                     <h4 className="text-lg sm:text-xl text-gray-300 mb-4">
-                        Experience Board Room
+                        Experience Topical Mist
                     </h4>
                     <p className="text-gray-400 max-w-2xl mx-auto mb-8 text-sm sm:text-base">
-                        Want to try Board Room? Reach out from the contact page or visit our collection.
+                        Want to try Topical Mist? Reach out from the contact page or visit our collection.
                     </p>
 
                 </div>
@@ -223,4 +220,4 @@ const BoardRoom = () => {
     );
 };
 
-export default BoardRoom;
+export default TopicalMist;
