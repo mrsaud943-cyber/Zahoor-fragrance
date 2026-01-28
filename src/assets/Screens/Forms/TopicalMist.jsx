@@ -138,7 +138,7 @@ const TopicalMist = () => {
                             Notes
                         </h3>
                         <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
-                            N/A
+                            Sweet, airy, unisexual, and luxurious, long lasting, and very distinctive.
                         </p>
                     </div>
 
@@ -147,9 +147,9 @@ const TopicalMist = () => {
                         ref={notesRef}
                     >
                         {[
-                            { title: "Top"},
-                            { title: "Middle"},
-                            { title: "Base"},
+                            { title: "Top", text:"Pineapple, Blackcurrant, Apple, Bergamot"},
+                            { title: "Middle", text:"Birch, Patchouli, Jasmine, Rose"},
+                            { title: "Base", text:"Musk, Oakmoss, Ambergris, Vanilla"},
 
                         ].map((n) => (
                             <div
@@ -159,7 +159,7 @@ const TopicalMist = () => {
                                 <h4 className="text-lg sm:text-xl font-semibold text-yellow-400 mb-3">
                                     {n.title}
                                 </h4>
-                                <p className="text-gray-300 text-sm sm:text-base">N/A</p>
+                                <p className="text-gray-300 text-sm sm:text-base">{n.text}</p>
                             </div>
                         ))}
                     </div>
