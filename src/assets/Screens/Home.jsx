@@ -17,6 +17,7 @@ import room from "../Images/Room.png";
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GiDelicatePerfume } from "react-icons/gi";
+import video from "../video/home.mp4"
 
 const Home = () => {
     const scrollRef = useRef(null);
@@ -76,7 +77,7 @@ const Home = () => {
             <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-24">
                 <div className="absolute flex items-center justify-center">
                     <video
-                       src="../../../public/video/home.mp4" 
+                       src={video} 
                         autoPlay
                         loop
                         muted
