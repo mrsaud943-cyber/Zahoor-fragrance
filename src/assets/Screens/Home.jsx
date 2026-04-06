@@ -26,7 +26,7 @@ const Home = () => {
     const data = [
         { Name: "Wood Of Kings", h2: "Impression of Oud Wood", img: woods, price: "Rs 2,599", rating: 4.8, path: "/sells" },
         { Name: "Velvet Nights", h2: "Impression of Baccarat Rouge", img: night, price: "Rs 2,499", rating: 4.9, path: "/sells", },
-        { Name: "Board Room", h2: "Impression of Office For Men", img: room, price: "Rs 2,299", rating: 4.6, path: "/sells" },
+        { Name: "Board Room", h2: "Impression of Office For Men", img: room, price: "Rs 2,599", rating: 4.6, path: "/sells" },
     ];
 
     const services = [
