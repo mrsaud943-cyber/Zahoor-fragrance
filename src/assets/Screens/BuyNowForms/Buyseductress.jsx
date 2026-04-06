@@ -56,7 +56,7 @@ const Buyseductress = () => {
  Phone: ${phone}
  Address: ${address}
  Quantity: ${quantity}
- Price: Rs 1,900 PKR (50ml) per bottle
+ Price: Rs 1,999 PKR (50ml) per bottle
  Message: ${message || "N/A"}
 
 Please confirm my order.`;

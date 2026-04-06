@@ -56,7 +56,7 @@ const Velvet = () => {
  Phone: ${phone}
  Address: ${address}
  Quantity: ${quantity}
- Price: Rs 2,399 PKR (50ml) per bottle
+ Price: Rs 2,499 PKR (50ml) per bottle
  Message: ${message || "N/A"}
 
 Please confirm my order.`;

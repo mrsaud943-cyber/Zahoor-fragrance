@@ -56,7 +56,7 @@ const Board = () => {
  Phone: ${phone}
  Address: ${address}
  Quantity: ${quantity}
- Price: Rs 2,600 PKR (50ml) per bottle
+ Price: Rs 2,599 PKR (50ml) per bottle
  Message: ${message || "N/A"}
 
 Please confirm my order.`;

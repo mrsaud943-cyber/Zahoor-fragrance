@@ -15,10 +15,10 @@ import top from "../Images/top.png";
 const Sells = () => {
   const [data] = useState([
     { Name: "Wood Of Kings", h2: "Impression of Oud Wood", img: Woods, price: "Rs 2,599", rating: 4.8, path: "/WoodOfKings" },
-    { Name: "Velvet Nights", h2: "Impression of Baccarat Rouge", img: Night, price: "Rs 2,399", rating: 4.9, path: "/VelvetNight" },
-    { Name: "Board Room", h2: "Impression of Office For Men", img: Room, price: "Rs 2600", rating: 4.6, path: "/BoardRoom" },
+    { Name: "Velvet Nights", h2: "Impression of Baccarat Rouge", img: Night, price: "Rs 2,499", rating: 4.9, path: "/VelvetNight" },
+    { Name: "Board Room", h2: "Impression of Office For Men", img: Room, price: "Rs 2599", rating: 4.6, path: "/BoardRoom" },
     { Name: "Floral Oasis", h2: "Impression of Gucci Flora", img: Oasis, price: "Rs 2,050", rating: 4.5, path: "/FloralOasis" },
-    { Name: "Seductress", h2: "Impression of Bombshell", img: Seductress, price: "Rs 1,900", rating: 4.7, path: "/Seductress" },
+    { Name: "Seductress", h2: "Impression of Bombshell", img: Seductress, price: "Rs 1,999", rating: 4.7, path: "/Seductress" },
     { Name: "Tropical Mist", img: Topical, price: "Rs 3500", rating: 4.9, path: "/TopicalMist" },
     { Name: "Tester Box", h2: "5ml five separate fragrances", img: Taster, price: "Rs 1,500", rating: 4.5, path:"/taster" },
   ]);

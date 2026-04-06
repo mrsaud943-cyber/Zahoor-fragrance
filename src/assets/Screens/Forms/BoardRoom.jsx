@@ -92,7 +92,7 @@ const BoardRoom = () => {
 
                         <div className="mt-4 text-center md:text-left">
                             <p className="text-yellow-300 text-xl sm:text-2xl font-semibold tracking-wide">
-                                50ml – 2600 PKR
+                                50ml – 2599 PKR
                             </p>
                             <p className="text-yellow-200/70 text-sm mt-1 italic">Per Bottle</p>
                         </div>
