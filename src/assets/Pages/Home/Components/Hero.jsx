@@ -26,8 +26,10 @@ export default function Hero() {
         setCurrent((current + 1) % images.length);
 
     return (
-        <section className="relative h-screen w-full bg-black overflow-hidden flex items-center">
-
+        <section className="relative min-h-screen w-full bg-black overflow-hidden flex items-center">
+            {/* Added padding-top to account for fixed/sticky navbar */}
+            {/* Navbar height is approximately 80-100px on mobile and 100-120px on desktop */}
+            
             {/* ── Ambient glow ─────────────────────────────────────────── */}
             <div className="pointer-events-none absolute inset-0">
                 <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-[#A98450]/10 blur-[120px]" />
@@ -44,7 +46,9 @@ export default function Hero() {
                 }}
             />
 
-            <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 lg:px-12 py-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+            {/* Main content with padding-top to clear the navbar */}
+            <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 lg:px-12 py-8 flex flex-col lg:flex-row items-center justify-between gap-8 pt-20 sm:pt-24 lg:pt-28">
+                {/* pt-20 for mobile, pt-24 for tablet, pt-28 for desktop */}
 
                 {/* ════════════════════════════════════════════
                     LEFT — COPY
@@ -75,7 +79,7 @@ export default function Hero() {
                                 key={word}
                                 className="block leading-[0.9] text-[#D4A96A]"
                                 style={{
-                                    fontSize: "clamp(48px, 8vw, 100px)",
+                                    fontSize: "clamp(40px, 7vw, 100px)",
                                     fontWeight: 600,
                                     letterSpacing: "-0.02em",
                                     textShadow: "0 0 80px rgba(169,132,80,0.2)",
@@ -115,10 +119,10 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.95 }}
-                        className="mt-8 flex items-center gap-5"
+                        className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5"
                     >
                         <button
-                            className="group relative px-6 py-2.5 overflow-hidden text-[#0a0804] text-xs tracking-[0.2em] uppercase font-semibold"
+                            className="group relative px-6 py-2.5 overflow-hidden text-[#0a0804] text-xs tracking-[0.2em] uppercase font-semibold w-full sm:w-auto"
                             style={{
                                 background: "linear-gradient(135deg, #D4A96A, #A98450)",
                                 fontFamily: "Cormorant Garamond, serif",
@@ -136,18 +140,18 @@ export default function Hero() {
                         </button>
 
                         <button
-                            className="text-[#A98450]/60 hover:text-[#A98450] text-xs tracking-[0.2em] uppercase transition-colors duration-300 outfit"
+                            className="text-[#A98450]/60 hover:text-[#A98450] text-xs tracking-[0.2em] uppercase transition-colors duration-300 outfit w-full sm:w-auto"
                         >
                             About us →
                         </button>
                     </motion.div>
 
-                    {/* Slide counter */}
+                    {/* Slide counter - hidden on mobile, visible on tablet and up */}
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.1 }}
-                        className="mt-8 flex items-center gap-2"
+                        className="hidden md:flex mt-8 items-center gap-2"
                     >
                         {images.map((_, i) => (
                             <button
@@ -179,7 +183,7 @@ export default function Hero() {
                     transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
                 >
                     <div
-                        className="relative w-full max-w-[400px]"
+                        className="relative w-full max-w-[350px] sm:max-w-[400px]"
                         style={{ aspectRatio: "4/5" }}
                     >
                         {/* Decorative corner frames */}
@@ -191,7 +195,7 @@ export default function Hero() {
                         ].map((cls, i) => (
                             <span
                                 key={i}
-                                className={`absolute w-6 h-6 border-[#A98450]/50 ${cls}`}
+                                className={`absolute w-4 h-4 sm:w-6 sm:h-6 border-[#A98450]/50 ${cls}`}
                                 style={{ zIndex: 20 }}
                             />
                         ))}
@@ -228,28 +232,26 @@ export default function Hero() {
 
                         {/* Nav buttons */}
                         <div
-                            className="absolute bottom-4 left-0 right-0 flex items-center justify-between px-5"
+                            className="absolute bottom-4 left-0 right-0 flex items-center justify-between px-3 sm:px-5"
                             style={{ zIndex: 15 }}
                         >
                             <button
                                 onClick={prev}
                                 aria-label="Previous slide"
-                                className="group flex items-center gap-2 text-[#D4A96A]/70 hover:text-[#D4A96A] transition-colors duration-300"
+                                className="group flex items-center gap-1 sm:gap-2 text-[#D4A96A]/70 hover:text-[#D4A96A] transition-colors duration-300"
                             >
                                 <span>
-                                    <FiArrowLeft size={20} />
+                                    <FiArrowLeft size={16} className="sm:w-5 sm:h-5" />
                                 </span>
-
                                 <span
-                                    className="text-[15px] tracking-[0.25em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 Syne"
+                                    className="text-[10px] sm:text-[15px] tracking-[0.25em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 Syne hidden sm:inline-block"
                                 >
                                     Prev
                                 </span>
-
                             </button>
 
                             <span
-                                className="text-[#A98450]/80 text-[15px] tracking-widest Syne"
+                                className="text-[#A98450]/80 text-[11px] sm:text-[15px] tracking-widest Syne"
                             >
                                 0{current + 1} / 0{images.length}
                             </span>
@@ -257,16 +259,15 @@ export default function Hero() {
                             <button
                                 onClick={next}
                                 aria-label="Next slide"
-                                className="group flex items-center gap-2 text-[#D4A96A]/70 hover:text-[#D4A96A] transition-colors duration-300"
+                                className="group flex items-center gap-1 sm:gap-2 text-[#D4A96A]/70 hover:text-[#D4A96A] transition-colors duration-300"
                             >
                                 <span
-                                    className="text-[15px] tracking-[0.25em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 Syne"
+                                    className="text-[10px] sm:text-[15px] tracking-[0.25em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 Syne hidden sm:inline-block"
                                 >
                                     Next
                                 </span>
-
                                 <span>
-                                    <FiArrowRight size={20} />
+                                    <FiArrowRight size={16} className="sm:w-5 sm:h-5" />
                                 </span>
                             </button>
                         </div>

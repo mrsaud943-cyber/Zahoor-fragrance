@@ -1,31 +1,24 @@
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from './assets/Pages/Home/Page/Home'
-import Layout from './assets/Layout/Layout.jsx'
-import About from './assets/Pages/About/Page/About.jsx'
+import Layout from "./assets/Layout/Layout.jsx";
+import Home from "./assets/Pages/Home/Page/Home";
+import About from "./assets/Pages/About/Page/About";
+import ScrollToTop from "./assets/commen/Components/ScrollToTop.jsx";
 
 const App = () => {
-    return (
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
 
-        <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-            <Routes>
-
-                {/* Parent Layout Route */}
-                <Route element={<Layout />}>
-
-                    {/* Child Routes */}
-                    <Route path='/' element={<Home />} />
-                    <Route path='/about' element={<About />} />
-
-                </Route>
-
-            </Routes>
-
-        </BrowserRouter>
-
-    )
-}
-
-export default App
+export default App;
